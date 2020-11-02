@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="/css/list.css">
+
+
+<center>
+    <% if(locals.user){%>
+    <div id="viewalluserhabit">
+            <table>
+                <th>
+                    Monday
+                </th>
+                <% for(var i=0; i<habit.length;i++) {%>
+                    <% if((habit[i].day == 'monday') || (habit[i].day == 'Monday')) {%>
+                        <td><%= habit[i].habit %></td>
+                    <%} %>
+                    
+                <%} %>
+           </table>
+
+           <table>
+            <th>
+                Tuesday
+            </th>
+            <% for(var i=0; i<habit.length;i++) {%>
+                <% if((habit[i].day == 'tuesday') || (habit[i].day == 'Tuesday')) {%>
+                    <td><%= habit[i].habit %></td>
+                <%} %>
+                
+            <%} %>
+            </table>
+
+            <table>
+                <th>
+                    Wednesday
+                </th>
+                <% for(var i=0; i<habit.length;i++) {%>
+                    <% if((habit[i].day == 'wednesday') || (habit[i].day == 'Wednesday')) {%>
+                        <td><%= habit[i].habit %></td>
+                    <%} %>
+                    
+                <%} %>
+            </table>
+
+            <table>
+                <th>
+                    Thursday
+                </th>
+                <% for(var i=0; i<habit.length;i++) {%>
+                    <% if((habit[i].day == 'thursday') || (habit[i].day == 'Thursday')) {%>
+                        <td><%= habit[i].habit %></td>
+                    <%} %>
+                    
+                <%} %>
+            </table>
+
+            <table>
+                <th>
+                    Friday
+                </th>
+                <% for(var i=0; i<habit.length;i++) {%>
+                    <% if((habit[i].day == 'friday') || (habit[i].day == 'Friday')) {%>
+                        <td><%= habit[i].habit %></td>
+                    <%} %>
+                    
+                <%} %>
+            </table>
+
+            <table>
+                <th>
+                    Saturday
+                </th>
+                <% for(var i=0; i<habit.length;i++) {%>
+                    <% if((habit[i].day == 'saturday') || (habit[i].day == 'Saturday')) {%>
+                        <td><%= habit[i].habit %></td>
+                    <%} %>
+                    
+                <%} %>
+            </table>
+
+            <table>
+                <th>
+                    Sunday
+                </th>
+                <% for(var i=0; i<habit.length;i++) {%>
+                    <% if((habit[i].day == 'sunday') || (habit[i].day == 'Sunday')) {%>
+                        <td><%= habit[i].habit %></td>
+                    <%} %>
+                    
+                <%} %>
+            </table>
+            
+        </table>
+    </div>
+    <%}else {%>
+       <h1>Login to get the list of habit of a particular user</h1> 
+    <%}%>
+</center>
+
+
+

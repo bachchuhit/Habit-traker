@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  background-color: aquamarine; }
+
+#layout-main {
+  height: 80%;
+  background-position: center; }
+  #layout-main img {
+    height: 125%;
+    width: 100%;
+    background-position: center; }

@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="/css/user_profile.css">
+
+<section id="container">
+    Welcome, <%= user.name%>!!!
+</section>
+
+<center>
+<form action="habit/create" method="POST">
+    <input type="text" name="habit" placeholder="Enter Your Habit" required>
+    <input type="text" name="day" placeholder="Enter Habit Day" required>
+    <input type="number" name="frequency" placeholder="Enter Habit frequency" required>
+    <input type="submit" value="Submit Habit"><br>
+</form>
+
+<% if(locals.user){%>
+<div id="habit-list-container">
+    <table>
+        <tr>
+            <th>Habit Description</th>
+            <th>Day of Week</th>
+            <th>Frequency Per Week</th>
+            <th>Action</th>
+            <th>Done/Not Done</th>
+        </tr>
+        <% for(habit of habit){ %>
+           
+                
+            <% if(locals.user.id == habit.user.id) {%> 
+            
+                <tr>
+                    <td><%= habit.habit %></td>
+                    <td><%= habit.day %></td>
+                    <td><%= habit.frequency %></td>
+                    
+                    
+                    <td>
+                        <a href="/users/habit/delete/?id=<%= habit._id %>">Del </a>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" >
+                    </td>
+                    
+                </tr>
+           
+       
+            <%}  %>
+        <%} %>
+    </ul>
+</table>
+</div>
+<%}%>
+</center>
